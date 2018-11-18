@@ -4,5 +4,5 @@
 /*.xcodeproj
 Sources/SwiftGio.swift
 Package.pins
-Package.resolved
+/Package.resolved
 *-*.swift

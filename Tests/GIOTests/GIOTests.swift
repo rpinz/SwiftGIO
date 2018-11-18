@@ -45,8 +45,8 @@ class GIOTests: XCTestCase {
                 XCTAssertNotEqual(rv, 0)
                 cancellable.cancel()
                 XCTAssertTrue(cancellableCallbackFlag)
-                XCTAssertEqual(calledBackCount, 0)
             }
+            XCTAssertEqual(calledBackCount, 0)
         }
         XCTAssertEqual(calledBackCount, 1)
     }
