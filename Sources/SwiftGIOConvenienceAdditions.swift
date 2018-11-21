@@ -32,7 +32,7 @@ public extension CancellableProtocol {
     /// @callback is invoked.  This lifts a restriction in place for
     /// earlier GLib versions which now makes it easier to write cleanup
     /// code that unconditionally invokes e.g. g_cancellable_cancel().
-    public func connect<T>(data: UnsafePointer<T>? = nil, dataDestroyFunc: GLib.DestroyNotify? = nil, callback c: @escaping GLibObject.Callback) -> CUnsignedLong {
+    func connect<T>(data: UnsafePointer<T>? = nil, dataDestroyFunc: GLib.DestroyNotify? = nil, callback c: @escaping GLibObject.Callback) -> CUnsignedLong {
         let d = data.map { UnsafeMutableRawPointer(mutating: $0) } ?? UnsafeMutableRawPointer(ptr)
         let f = dataDestroyFunc ?? { _ in }
         return connect(callback: c, data: d, dataDestroyFunc: f)
