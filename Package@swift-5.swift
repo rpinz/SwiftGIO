@@ -24,6 +24,6 @@ let package = Package(
             dependencies: ["GIO"])
     ],
     swiftLanguageVersions: [
-        .v4_2
+        .v5
     ]
 )
